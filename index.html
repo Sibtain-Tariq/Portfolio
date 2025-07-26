@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sibtain's Portfolio</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #0f2547;
+      color: #ecf0f1;
+      padding: 60px 5px;
+      text-align: center;
+    }
+
+    header h1 {
+  font-size: 3em;
+  margin-bottom: 35px; /* This adds space below your name */
+}
+
+header h3 {
+  font-weight: normal;
+  margin-top: 0;
+  font-size: 1.1em;
+}
+
+.hero {
+  background: linear-gradient(to right, #0f2547, #1e3c72);
+  color: #ecf0f1;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  animation: fadeInDown 0.8s ease-in-out;
+}
+
+.hero h3 {
+  font-weight: normal;
+  font-size: 1.1em;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.tagline {
+  font-size: 1em;
+  margin-top: 15px;
+  color: #d0d8e0;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero::before {
+  top: -60px;
+  left: -90px;
+}
+
+.hero::after {
+  bottom: -70px;
+  right: -100px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .project {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .project:hover {
+      transform: scale(1.02);
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+   a {
+  color: #1E90FF; /* Dark gray-blue */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2a52be; /* Even darker on hover */
+  text-decoration: underline;
+}
+
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      section {
+        padding: 30px 10px;
+      }
+    }
+
+    /* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation classes */
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-zoomIn {
+  animation: zoomIn 0.7s ease forwards;
+}
+
+/* Scroll trigger */
+section.visible, .project.visible, .animate-on-scroll.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+<header class="hero">
+  <div class="hero-content">
+    <h1>Muhammad Sibtain Tariq</h1>
+    <h3> Data Analysis | | Machine Learning | Power BI | Python | Sql |</h3>
+    <p class="tagline">Turning data into decisions, and ideas into automation.</p>
+  </div>
+</header>
+
+
+  <!-- About Me -->
+<section id="about" style="background-color: #eef2f7; padding: 60px 20px;">
+  <h2 class="animate-on-scroll" style="text-align: center; margin-bottom: 40px;">About Me</h2>
+
+  <div style="background-color: #ffffff; padding: 40px 30px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); max-width: 850px; margin: auto; font-size: 16px; line-height: 1.7; display: flex; flex-direction: column; gap: 20px;">
+    <p class="animate-on-scroll">
+      I am currently pursuing a Bachelor's degree in Data Science at KFUEIT. My interest in this field began with the rise of artificial intelligence and the transformative power of data in decision-making.
+    </p>
+    <p class="animate-on-scroll">
+      I actively work with Python, SQL, Power BI, and machine learning to build smart, data-driven solutions. One of my core projects is a customizable business software designed for local industries, offering integrated dashboards, automated reports, and a chatbot for assistance.       I am continuously enhancing my Power BI capabilities to deliver insightful visualizations and exploring AI chatbot development for improved user experience. My work reflects a blend of technical knowledge and real-world problem-solving.
+
+    </p>
+
+    <p class="animate-on-scroll">
+      Outside of tech, I enjoy photography, cars, bikes, and gaming, which fuel my creativity and give me a balanced perspective in life and work.
+    </p>
+  </div>
+</section>
+
+
+
+<!-- Skills -->
+<section id="skills" >
+  <h2 class="animate-on-scroll" style="text-align: center; margin-bottom: 40px;">Skills</h2>
+
+  <div class="animate-on-scroll" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; max-width: 800px; margin: auto;">
+    <span style="background-color: #ffffff; padding: 12px 24px; border-radius: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); font-size: 16px;">
+      Python
+    </span>
+    <span class="animate-on-scroll" style="background-color: #ffffff; padding: 12px 24px; border-radius: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); font-size: 16px;">
+      Microsoft Power BI
+    </span>
+    <span class="animate-on-scroll" style="background-color: #ffffff; padding: 12px 24px; border-radius: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); font-size: 16px;">
+      SQL
+    </span>
+    <span class="animate-on-scroll" style="background-color: #ffffff; padding: 12px 24px; border-radius: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); font-size: 16px;">
+      Machine Learning
+    </span>
+    <span class="animate-on-scroll" style="background-color: #ffffff; padding: 12px 24px; border-radius: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); font-size: 16px;">
+      Data Management
+    </span>
+    <span class="animate-on-scroll" style="background-color: #ffffff; padding: 12px 24px; border-radius: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); font-size: 16px;">
+      JavaScript
+    </span>
+    <span class="animate-on-scroll" style="background-color: #ffffff; padding: 12px 24px; border-radius: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); font-size: 16px;">
+      Web Development
+    </span>
+    <span class="animate-on-scroll" style="background-color: #ffffff; padding: 12px 24px; border-radius: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); font-size: 16px;">
+      App Development
+    </span>
+  </div>
+</section>
+
+
+
+
+  <!-- My Work -->
+<section id="my-work">
+ <h2 class="animate-on-scroll" style="text-align: center; margin-bottom: 40px;">My Work</h2>
+
+  <div class="project animate-on-scroll">
+  <h3>
+    <a href="https://github.com/Sibtain-Tariq/Automated-Business-Software" target="_blank">
+      Automated Business Software for Sales Agents
+    </a>
+  </h3>
+  <p class="animate-on-scroll">
+    This is an ongoing project where I am building an automated business management software tailored for a local bakery supply business. The focus is on simplifying sales agent operations by centralizing and automating data entry. The system is designed so that the user only needs to input data on a single page, and all related calculations, reports, and summaries are updated automatically across the application.
+  </p>
+  <p class="animate-on-scroll">
+    The software includes modules for delivery challans, agent-wise financial summaries, daily sale tracking, discount handling, and net sale calculations. Each page is designed with ease of use in mind, while ensuring accurate, real-time calculations for sales performance, commissions, discounts, and payments.
+  </p>
+  <p class="animate-on-scroll">
+    Although still in development, we plan to integrate Power BI dashboards for better visual reporting and an AI chatbot to provide on-page assistance and real-time support. This project has helped me combine my technical skills in React and data management with real business requirements to build something practical and scalable for local industries.
+  </p>
+</div>
+
+
+  <!-- Project 1: Ethereum Price Forecasting -->
+  <div class="project animate-on-scroll">
+    <h3>
+      <a href="https://github.com/Sibtain-Tariq/Project-Ethereum-Price-Forecasting-with-ARIMA-ARIMAX" target="_blank">
+        Ethereum Price Forecasting using ARIMA and ARIMAX
+      </a>
+    </h3>
+    <p class="animate-on-scroll">
+      In this project, I built a forecasting system for Ethereum (ETH/USDT) using time series analysis with ARIMA and ARIMAX models. The dataset was collected from Yahoo Finance and included daily open, high, low, close, and volume values.
+      I performed data cleaning, feature selection, and implemented an ARIMAX model using Python, integrating exogenous variables such as market volume and price fluctuations. I tested multiple (p, d, q) configurations, tracked model performance using RMSE and MAPE, and selected the best model to generate accurate 30-day price forecasts. Visualizations were created to compare real vs predicted values and highlight market trends. This project helped me strengthen my understanding of time series forecasting, model tuning, and financial data analysis.
+    </p>
+  </div>
+
+  <!-- Project 2: Medical LLaMA Fine-Tuning -->
+  <div class="project animate-on-scroll">
+    <h3>
+      <a href="https://github.com/Sibtain-Tariq/Project-Fine-Tuning-of-llama-on-a-medical-Chain-of-Thought-Dataset-with-Unsloth-wandb./tree/main" target="_blank">
+        Medical Chain-of-Thought Reasoning with LLaMA 3.2 using PEFT
+      </a>
+    </h3>
+    <p class="animate-on-scroll">
+      I fine-tuned the LLaMA 3.2 (3B) language model on a medical Chain-of-Thought dataset using parameter-efficient fine-tuning (PEFT) inside Kaggle Notebooks. The project focused on improving the model’s ability to produce step-by-step medical reasoning using LoRA with 4-bit quantization via the Unsloth library.
+      I formatted the dataset into a chat-based prompt structure, implemented supervised fine-tuning using `SFTTrainer`, and tracked training loss, memory usage, and ROUGE-L scores using Weights & Biases. After evaluating the improvements, I deployed the fine-tuned LoRA adapter and tokenizer for future inference. This project deepened my experience with LLMs, efficient training methods, and building AI tools for the healthcare domain.
+    </p>
+  </div>
+
+</section>
+
+
+  <!-- Past Work -->
+  <section id="past-work" >
+  <h2 class="animate-on-scroll" style="text-align: center; margin-bottom: 40px;">Past Work</h2>
+
+  <div class="animate-on-scroll" style="display: flex; flex-direction: column; gap: 20px; max-width: 800px; margin: auto;">
+
+    <div style="background-color: #ffffff; padding: 20px 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);">
+      <h3 style="margin-bottom: 10px;">Amazon Specialist</h3>
+      <p class="animate-on-scroll" style="font-size: 16px; line-height: 1.6;">
+        I worked on product listings, FBA operations, and keyword optimization. My focus was on improving visibility and managing complete store performance.
+      </p>
+    </div>
+
+    <div class="animate-on-scroll" style="background-color: #ffffff; padding: 20px 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);">
+      <h3 style="margin-bottom: 10px;">WordPress Website Developer</h3>
+      <p class="animate-on-scroll" style="font-size: 16px; line-height: 1.6;">
+        I build responsive websites using WordPress and have helped clients get their sites approved by Google AdSense through optimized, SEO-friendly design.
+      </p>
+    </div>
+
+    <div class="animate-on-scroll" style="background-color: #ffffff; padding: 20px 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);">
+      <h3 style="margin-bottom: 10px;">Digital Marketing Specialist</h3>
+      <p class="animate-on-scroll" style="font-size: 16px; line-height: 1.6;">
+        I manage ad campaigns across Google Ads and Meta Ads. My work involves campaign setup, targeting, and improving engagement and conversion rates.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Contact Me -->
+<section id="contact" style="background-color: #eef2f7; padding: 60px 20px;">
+  <h2 class="animate-on-scroll" style="text-align: center; margin-bottom: 40px;">Contact Me</h2> 
+
+
+  <div class="animate-on-scroll" style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 20px; font-size: 16px;">
+
+    <div class="animate-on-scroll" style="background-color: #ffffff; padding: 15px 20px; border-radius: 10px; box-shadow: 0 1px 6px rgba(0,0,0,0.08);">
+      <strong>Email:</strong>
+      <a href="mailto:sibtaintariq001@gmail.com" style="color: #2a52be; display: block; margin-top: 4px;">
+        sibtaintariq001@gmail.com
+      </a>
+    </div>
+
+    <div class="animate-on-scroll" style="background-color: #ffffff; padding: 15px 20px; border-radius: 10px; box-shadow: 0 1px 6px rgba(0,0,0,0.08);">
+      <strong>LinkedIn:</strong>
+      <a href="https://www.linkedin.com/in/sibtain-tariq-profile001" target="_blank" style="color: #2a52be; display: block; margin-top: 4px;">
+        linkedin.com/in/sibtain-tariq-profile001
+      </a>
+    </div>
+
+    <div class="animate-on-scroll" style="background-color: #ffffff; padding: 15px 20px; border-radius: 10px; box-shadow: 0 1px 6px rgba(0,0,0,0.08);">
+      <strong>GitHub:</strong>
+      <a href="https://github.com/Sibtain-Tariq" target="_blank" style="color: #2a52be; display: block; margin-top: 4px;">
+        github.com/Sibtain-Tariq
+      </a>
+    </div>
+
+    <div class="animate-on-scroll" style="background-color: #ffffff; padding: 15px 20px; border-radius: 10px; box-shadow: 0 1px 6px rgba(0,0,0,0.08);">
+      <strong>WhatsApp:</strong>
+      <a href="https://wa.me/923228770001" target="_blank" style="color: #2a52be; display: block; margin-top: 4px;">
+        +92 322 8770001
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Sibtain. All rights reserved.</p>
+  </footer>
+<script>
+  const elements = document.querySelectorAll('.animate-on-scroll');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // animate once
+      }
+    });
+  }, {
+    threshold: 0.1,
+  });
+
+  elements.forEach(el => observer.observe(el));
+</script>
+
+
+</body>
+</html>
