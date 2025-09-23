@@ -223,11 +223,11 @@ section.visible, .project.visible, .animate-on-scroll.visible {
   transition: all 0.6s ease;
 }
 
-    /* Change only WhatsApp project text color */
-.whatsapp-project {
-  color: #2a52be; /* pick any color you like */
+/* WhatsApp project heading only */
+.whatsapp-heading {
+  color: #1E90FF; /* WhatsApp green, change if you like */
 }
-
+    
   </style>
 </head>
 <body>
@@ -318,10 +318,14 @@ section.visible, .project.visible, .animate-on-scroll.visible {
   </div>
 
    <!-- WhatsApp Chatbot Project -->
-  <div class="project animate-on-scroll whatsapp-project">
-    <h3>
+  <div class="project animate-on-scroll">
+    <h3 class="whatsapp-heading">
       WhatsApp AI Chatbot (n8n)
     </h3>
+    <p class="animate-on-scroll">
+      I designed and deployed an intelligent WhatsApp chatbot using ...
+    </p>
+
 
     <p class="animate-on-scroll">
       I designed and deployed an intelligent WhatsApp chatbot using n8n as the automation backbone, hosted on Render for reliability and scalability. The chatbot leverages the Gemini API to provide conversational AI capabilities, while Google Sheets and local storage are integrated for structured data management and logging.
@@ -465,6 +469,7 @@ section.visible, .project.visible, .animate-on-scroll.visible {
 
 </body>
 </html>
+
 
 
 
