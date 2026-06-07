@@ -40,6 +40,17 @@
   border-radius: 2px;
 }
 
+    #progress-bar {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(to right, #7eaaff, #0f2547);
+  z-index: 999;
+  transition: width 0.1s linear;
+}
+
 @media (max-width: 650px) {
   #nav-links { display: none !important; }
   #hamburger { display: flex !important; }
@@ -297,6 +308,8 @@ section.visible, .project.visible, .animate-on-scroll.visible {
     <a href="Sibtain-CV.pdf" download style="color: #7eaaff; font-size: 15px; text-decoration: none; font-weight: 600;">Download CV</a>
   </div>
 </nav>
+
+  <div id="progress-bar"></div>
   
   <!-- Header -->
 <header class="hero">
@@ -643,6 +656,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+  window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / docHeight) * 100;
+  document.getElementById('progress-bar').style.width = progress + '%';
+});
+  
 </script>
 
 
