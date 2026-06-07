@@ -266,6 +266,13 @@ section.visible, .project.visible, .animate-on-scroll.visible {
 .whatsapp-heading {
   color: #1E90FF; /* WhatsApp green, change if you like */
 }
+
+    .nav-link.active {
+  color: #ffffff;
+  font-weight: 600;
+  border-bottom: 2px solid #7eaaff;
+  padding-bottom: 2px;
+}
     
   </style>
 </head>
@@ -662,6 +669,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   const docHeight = document.body.scrollHeight - window.innerHeight;
   const progress = (scrollTop / docHeight) * 100;
   document.getElementById('progress-bar').style.width = progress + '%';
+});
+
+  const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    if (window.scrollY >= section.offsetTop - 80) {
+      current = section.getAttribute('id');
+    }
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
 });
   
 </script>
