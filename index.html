@@ -331,8 +331,7 @@ section.visible, .project.visible, .animate-on-scroll.visible {
 <header class="hero">
   <div class="hero-content">
     <h1>Muhammad Sibtain Tariq</h1>
-    <h3>Data Analysis | Machine Learning | Power BI | Python | SQL</h3>
-    <p class="tagline">Turning data into decisions, and ideas into automation.</p>
+<h3 id="typed-text" style="font-weight: normal; font-size: 1.1em; min-height: 1.5em;"></h3>    <p class="tagline">Turning data into decisions, and ideas into automation.</p>
     <div style="margin-top: 35px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
       <a href="#my-work"
          style="background-color: #ffffff; color: #0f2547; padding: 12px 28px; border-radius: 8px; font-size: 16px; font-weight: 600; text-decoration: none; transition: background-color 0.3s, transform 0.2s; display: inline-block;"
@@ -697,6 +696,28 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+  const roles = [
+  "Data Scientist",
+  "Machine Learning Engineer",
+  "AI Automation Developer",
+  "Power BI Developer"
+];
+let roleIndex = 0, charIndex = 0, deleting = false;
+
+function type() {
+  const el = document.getElementById('typed-text');
+  const current = roles[roleIndex];
+  if (!deleting) {
+    el.textContent = current.substring(0, charIndex++);
+    if (charIndex > current.length) { deleting = true; setTimeout(type, 1200); return; }
+  } else {
+    el.textContent = current.substring(0, charIndex--);
+    if (charIndex < 0) { deleting = false; roleIndex = (roleIndex + 1) % roles.length; }
+  }
+  setTimeout(type, deleting ? 50 : 80);
+}
+type();
   
 </script>
 
